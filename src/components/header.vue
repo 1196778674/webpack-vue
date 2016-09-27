@@ -4,7 +4,7 @@
 			<a class="navbar-brand" href="#">vueApp</a>
 			<ul class="nav navbar-nav">
 				<li>
-					<a href="#/home">列表</a>
+					<a href="#" v-link="{path:'/home'}">home</a>
 				</li>
 			</ul>
 		</div>

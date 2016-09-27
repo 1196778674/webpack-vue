@@ -1,6 +1,6 @@
 <template>
   <nv-header></nv-header>
-  <nv-main></nv-main>
+  <router-view ></router-view>
   <nv-footer></nv-footer>
 </template>
 
@@ -9,7 +9,6 @@
     replace: false,
     components: {
       "nvHeader": require('./components/header.vue'),
-      "nvMain": require('./components/main.vue'),
       "nvFooter": require('./components/footer.vue')
     }
   }
