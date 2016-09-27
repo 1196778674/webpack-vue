@@ -1,11 +1,11 @@
-# install dependencies
+## 安装依赖
 npm install
 
-# serve with hot reload at localhost:8080
+## 启动服务
 npm run dev
 
-# build for production with minification
+## 构建项目
 npm run build
 
-# run unit tests
+## 自动测试
 npm test
