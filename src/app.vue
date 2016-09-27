@@ -1,36 +1,16 @@
 <template>
-  <div class="main container">
-    <input type="text" v-model="text" />
-    <div class="hello">Hello {{ text }}!</div>
-    <div class="text-center">
-      <dropdown>
-        <button type="button" class="btn btn-success" data-toggle="dropdown">
-          Welcome
-          <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
-          <li role="separator" class="divider"></li>
-          <li><a href="#">Separated link</a></li>
-        </ul>
-      </dropdown>
-    </div>
-  </div>
+  <nv-header></nv-header>
+  <nv-main></nv-main>
+  <nv-footer></nv-footer>
 </template>
 
 <script>
-  import { dropdown } from 'vue-strap/dist/vue-strap.js'
   export default {
     replace: false,
-  	data() {
-      return {
-        text: 'vue'
-      }
-    },
     components: {
-      dropdown
-    },
+      "nvHeader": require('./components/header.vue'),
+      "nvMain": require('./components/main.vue'),
+      "nvFooter": require('./components/footer.vue')
+    }
   }
 </script>
