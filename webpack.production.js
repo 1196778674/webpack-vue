@@ -1,5 +1,6 @@
 var webpack = require('webpack')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
+var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: {
@@ -7,8 +8,8 @@ module.exports = {
   },
   output: {
     path: './build',
-    publicPath: '/build/',
-    filename: 'bundle.js'
+    // publicPath: '/build/',
+    filename: 'build.[hash].js'
   },
   module: {
     loaders: [
@@ -36,6 +37,11 @@ module.exports = {
     }),
     new ExtractTextPlugin('[name].min.css', {
       allChunks: true
+    }),
+    new HtmlWebpackPlugin({
+      filename: './index.html',
+      template: './index.html',
+      inject: true
     })
   ],
   vue: {
