@@ -1,11 +1,17 @@
+// 加载vue和vue-router依赖
 import Vue from 'vue'
-import app from './app.vue'
 import VueRouter from 'vue-router'
+
+// 加载入口文件
+import app from './app.vue'
 
 // views页面引入
 import index from './app.vue'
 import home from './views/home.vue'
 
+// 引入第三方库
+window.$ = window.jQuery = require('jquery')
+window.bootstrap = require('bootstrap')
 
 // 引入css样式
 import 'bootstrap/dist/css/bootstrap.css'
@@ -41,7 +47,6 @@ router.map({
 
 //定义全局的重定向规则。全局的重定向会在匹配当前路径之前执行。
 router.redirect({
-    //重定向任意未匹配路径到/index
     '*':"/index"
 });
 
