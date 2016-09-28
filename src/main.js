@@ -8,6 +8,7 @@ import app from './app.vue'
 // views页面引入
 import index from './app.vue'
 import home from './views/home.vue'
+import homeIndex from './views/index.vue'
 
 // 引入第三方库
 window.$ = window.jQuery = require('jquery')
@@ -37,11 +38,11 @@ var Index = Vue.extend({
 router.map({
 	'index': {
 		name: 'index',
-		component: Index
-	},
-	'/home': {
-	  	name: 'home',
-	    component: home
+		component: home,
+		// 渲染子视图
+		subRoutes: {
+	      '': { component: homeIndex}
+	    }
 	}
 })
 
