@@ -1,9 +1,11 @@
 <template>
-  <div class="left-main">
-    <nv-left></nv-left>
-  </div>
-  <div class="right-main">
-    <router-view ></router-view>
+  <div class="main-container">
+    <div class="left-main">
+      <nv-left></nv-left>
+    </div>
+    <div class="right-main">
+      <router-view ></router-view>
+    </div>
   </div>
 </template>
 
@@ -17,12 +19,18 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.main-container{
+  width: 100%;
+  overflow: hidden;
+}
 .left-main{
   width: 80px;
   height: 100%;
   float: left;
+  background: red;
 }
 .right-main{
-  float: left;
+  float: right;
+  width: 90%;
 }
 </style>

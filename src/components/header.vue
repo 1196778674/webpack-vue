@@ -1,33 +1,53 @@
 <template>
-	<nav class="navbar navbar-default navbar-static-top" role="navigation" :style="heightObj">
-		<div class="container">
-			<a class="navbar-brand" href="#">vueApp</a>
-			<ul class="nav navbar-nav">
-				<li v-for="nav in navs">
-					<a href="#" v-link="{path:nav.url}">{{nav.name}}</a>
+<nav class="navbar navbar-default" role="navigation">
+	<div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">{{ title }}</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ name }} <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li v-for="item in usercenter">
+							<a href="#" v-link="{path:'item.url'}">{{ item.name }}</a>
+						</li >
+					</ul>
 				</li>
 			</ul>
-		</div>
-	</nav>
+		</div><!-- /.navbar-collapse -->
+	</div>
+</nav>
 </template>
 
 <script>
-	export default {
-	    data () {
-	    	// 获取nav列表
-	  		this.$http.get('./src/json/nav.json',null).then(res => {
-	  			this.navs = res.data;
-	  		}).catch(err => {
-	  	  		console.log(err);
-	  		});
-	  		// 定义高度
-	  		var heightObj = {
-	  			background: '#fff'
-	  		};
-	    	return {
-	    		navs: this.navs,
-		    	heightObj: heightObj
-	    	};
-	  	}
-	};
+export default {
+
+  name: 'header',
+
+  data () {
+  	this.$http.get('./src/json/header.json').then(res => {
+  	  this.usercenter = res.data;
+  	}).catch(err => {
+  	  console.log(err);
+  	});
+    return {
+    	title: '厨品秀管理系统',
+    	name: '刘飞',
+    	usercenter: this.usercenter
+    };
+  }
+};
 </script>
+
+<style lang="css" scoped>
+</style>
