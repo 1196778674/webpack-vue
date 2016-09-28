@@ -1,7 +1,7 @@
 <template>
   <nv-header></nv-header>
   <router-view ></router-view>
-  <nv-footer></nv-footer>
+  <!-- <nv-footer></nv-footer> -->
 </template>
 
 <script>

@@ -19,7 +19,7 @@
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ name }} <b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li v-for="item in usercenter">
-							<a href="#" v-link="{path:'item.url'}">{{ item.name }}</a>
+							<a href="#" v-link="{path:item.url}">{{ item.name }}</a>
 						</li >
 					</ul>
 				</li>

@@ -13,6 +13,8 @@ import storemanagement from './views/storemanagement.vue'
 import datastatistics from './views/datastatistics.vue'
 import contractedstores from './views/contractedstores.vue'
 
+import usercenter from './views/usercenter/usercenter.vue'
+
 // 引入第三方库
 window.$ = window.jQuery = require('jquery')
 window.bootstrap = require('bootstrap')
@@ -45,10 +47,14 @@ router.map({
 		// 渲染子视图
 		subRoutes: {
 	      '': { component: homeIndex},
-	      '/storemanagement': { component: storemanagement},
-	      '/datastatistics': { component: datastatistics},
-	      '/contractedstores': { component: contractedstores}
+	      'storemanagement': { component: storemanagement},
+	      'datastatistics': { component: datastatistics},
+	      'contractedstores': { component: contractedstores}
 	    }
+	},
+	'usercenter': {
+		name: 'usercenter',
+		component: usercenter
 	}
 })
 
