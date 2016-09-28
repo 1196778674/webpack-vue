@@ -1,0 +1,12 @@
+.left-main {
+  position: absolute;
+  left: 0;
+  width: 80px;
+  top: 51px;
+  right: 0;
+  bottom: 0;
+  background: #314055;
+}
+.left-main .left {
+  text-align: center;
+}

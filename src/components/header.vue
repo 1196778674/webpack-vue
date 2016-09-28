@@ -35,19 +35,11 @@ export default {
   name: 'header',
 
   data () {
-  	this.$http.get('./src/json/header.json').then(res => {
-  	  this.usercenter = res.data;
-  	}).catch(err => {
-  	  console.log(err);
-  	});
-    return {
+  	return {
     	title: '厨品秀管理系统',
     	name: '刘飞',
-    	usercenter: this.usercenter
+    	usercenter: [{"name":"个人中心","url":"/usercenter"},{"name":"退出","url":"/layout"}]
     };
   }
 };
 </script>
-
-<style lang="css" scoped>
-</style>

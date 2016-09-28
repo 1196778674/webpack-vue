@@ -9,6 +9,9 @@ import app from './app.vue'
 import index from './app.vue'
 import home from './views/home.vue'
 import homeIndex from './views/index.vue'
+import storemanagement from './views/storemanagement.vue'
+import datastatistics from './views/datastatistics.vue'
+import contractedstores from './views/contractedstores.vue'
 
 // 引入第三方库
 window.$ = window.jQuery = require('jquery')
@@ -16,7 +19,7 @@ window.bootstrap = require('bootstrap')
 
 // 引入css样式
 import 'bootstrap/dist/css/bootstrap.css'
-import './styles/common.css'
+import './styles/app.css'
 
 Vue.config.debug = process.env.NODE_ENV !== 'production'
 
@@ -41,7 +44,10 @@ router.map({
 		component: home,
 		// 渲染子视图
 		subRoutes: {
-	      '': { component: homeIndex}
+	      '': { component: homeIndex},
+	      '/storemanagement': { component: storemanagement},
+	      '/datastatistics': { component: datastatistics},
+	      '/contractedstores': { component: contractedstores}
 	    }
 	}
 })

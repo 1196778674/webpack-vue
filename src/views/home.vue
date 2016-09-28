@@ -17,20 +17,3 @@ export default {
     }
   }
 </script>
-
-<style lang="css" scoped>
-.main-container{
-  width: 100%;
-  overflow: hidden;
-}
-.left-main{
-  width: 80px;
-  height: 100%;
-  float: left;
-  background: red;
-}
-.right-main{
-  float: right;
-  width: 90%;
-}
-</style>
