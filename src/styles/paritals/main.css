@@ -1,3 +1,8 @@
 .right-main {
-  margin-left: 100px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 51px;
+  left: 81px;
+  overflow-y: scroll;
 }
