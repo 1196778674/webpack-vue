@@ -1,0 +1,148 @@
+.chooseDate {
+  width: 100%;
+  height: 32px;
+  margin-top: 5px;
+  color: #555;
+  font-size: 14px;
+  line-height: 32px;
+  background: #F6F6F6;
+  border-radius: 3px;
+  transition: all 200ms ease;
+}
+.chooseDate .dateSelector {
+  position: relative;
+  top: 8px;
+  left: 50%;
+  margin-left: -150px;
+  width: 300px;
+  background: #FFF;
+  border: 1px solid #ddd;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+.chooseDate .dateSelector .wrap {
+  width: 100%;
+  height: 100%;
+  padding: 0 14px;
+}
+.chooseDate .dateSelector .wrap ul li {
+  float: left;
+  width: 90px;
+  margin-top: 2px;
+  list-style: none;
+  text-align: center;
+  cursor: pointer;
+  display: block;
+  border-radius: 2px;
+}
+.chooseDate .dateSelector .wrap ul li:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+.chooseDate .dateSelector .wrap ul li:active {
+  background: rgba(0, 0, 0, 0.1);
+}
+.chooseDate .dateSelector .wrap ul .btn {
+  width: 100%;
+}
+.chooseDate .dateSelector .wrap ul .day {
+  cursor: default;
+}
+.chooseDate .dateSelector .wrap ul .day:hover {
+  background: none;
+}
+.chooseDate .dateSelector .wrap ul .day:active {
+  background: none;
+}
+.chooseDate .dateSelector .wrap ul .active {
+  color: #FFF;
+  background: #F45757;
+}
+.chooseDate .dateSelector .wrap ul .active:hover {
+  background: #F45757;
+}
+.chooseDate .dateSelector .wrap ul .active:active {
+  background: #d44343;
+}
+.chooseDate .dateSelector .date {
+  padding: 0 9px;
+}
+.chooseDate .dateSelector .date ul li {
+  width: 40px;
+}
+.chooseDate .dateSelector .date ul .other {
+  color: #bbb;
+  cursor: default;
+}
+.chooseDate .dateSelector .date ul .other:hover {
+  background: none;
+}
+.chooseDate .dateSelector .date ul .other:active {
+  background: none;
+}
+.chooseDate .dateSelector .time {
+  color: #F45757;
+  font-size: 16px;
+}
+.chooseDate .dateSelector .time input {
+  width: 60px;
+  height: 40px;
+  font-size: 24px;
+  color: #F45757;
+  text-align: center;
+  border-bottom: 2px solid #ddd;
+}
+.chooseDate .dateSelector .time input:focus {
+  border-bottom: 2px solid #F45757;
+}
+.chooseDate .dateSelector .time input::-webkit-input-placeholder {
+  color: #ddd;
+}
+.chooseDate .dateSelector .time .button {
+  width: 100px;
+  height: 32px;
+  margin: 0 auto;
+  margin-top: 10px;
+  color: #aaa;
+  font-size: 14px;
+  line-height: 32px;
+  background: #F6F6F6;
+  border-radius: 3px;
+  transition: all 200ms ease;
+}
+.chooseDate .dateSelector .time .able {
+  color: #FFF;
+  background: #F45757;
+  cursor: pointer;
+}
+.chooseDate .dateSelector .time .able:active {
+  background: #d44343;
+}
+.chooseDate .dateSelector:before {
+  position: relative;
+  top: -6px;
+  left: 50%;
+  margin-left: -5px;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: 1px solid #ddd;
+  border-right: none;
+  border-bottom: none;
+  background: #FFF;
+  display: block;
+  transform: rotate(45deg);
+}
+/* 必需 */
+.fade-transition {
+  transition: all 400ms ease;
+  transform-origin: 0 0;
+  transform: translateY(0);
+  opacity: 1;
+}
+/* .fade-enter 定义进入的开始状态 */
+/* .fade-leave 定义离开的结束状态 */
+.fade-enter,
+.fade-leave {
+  transform: translateY(-20px);
+  opacity: 0;
+}
