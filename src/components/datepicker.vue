@@ -127,10 +127,6 @@ export default {
             this.dateShow = true
             this.microtime = this.timestamp()
         },
-        // 选择今天
-        checkToday () {
-            console.log(this);
-        },
         updateDate () {
             let thisyear = this.year
             let thismonth = this.month
