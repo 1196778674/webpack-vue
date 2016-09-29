@@ -1,9 +1,9 @@
 <template>
 	{{usercenter}}
-	<select v-model="selected">
+	<select v-model="selected" class="form-control">
 		<option v-for="option in selection" value="{{option.key}}">{{option.value}}</option >
 	</select>
-	<button type="button" @click="test()">button</button>
+	<button class="btn btn-success" type="button" @click="test()">button</button>
 </template>
 
 <script>
