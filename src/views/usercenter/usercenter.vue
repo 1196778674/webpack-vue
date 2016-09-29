@@ -18,6 +18,11 @@ export default {
     	this.aaa(this.selected);
     }
   },
+ watch: {
+   'selected': (val, oldVal) => {
+     console.log(val,oldVal);
+   }
+ },
   data () {
     return {
     	selected: '0',
