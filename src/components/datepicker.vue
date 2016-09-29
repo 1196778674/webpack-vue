@@ -60,7 +60,7 @@ export default {
             timeShow: false,
             year: new Date().getFullYear(),
             month: 4,
-            date: 3,
+            date: new Date().getDate(),
             hour: '',
             min: '',
             years: [new Date().getFullYear() - 4, new Date().getFullYear() - 3, new Date().getFullYear() - 2, new Date().getFullYear() - 1, new Date().getFullYear(), new Date().getFullYear() + 1, new Date().getFullYear() + 2, new Date().getFullYear() + 3, new Date().getFullYear() + 4],
@@ -73,7 +73,9 @@ export default {
     methods: {
         checkNow () {
             if (!this.isAble) return
-            this.value = [this.year, '0' + this.month, this.format(this.date)].join('.') + ' ' + [this.format(this.hour), this.format(this.min), '00'].join(':')
+            var month = (this.month+'').length < 2 ? ('0' + this.month) : this.month
+            // this.value = [this.year, month, this.format(this.date)].join('-') + ' ' + [this.format(this.hour), this.format(this.min), '00'].join(':')
+            this.value = [this.year, month, this.format(this.date)].join('-')
             this.toggle()
             this.timeShow = false
             this.yearShow = false
@@ -115,8 +117,19 @@ export default {
         chooseDate (date, thismonth) {
             if (!thismonth) return
             this.date = date
-            this.dateShow = false
-            this.timeShow = true
+            // this.dateShow = false
+            // this.timeShow = true
+            var month = (this.month+'').length < 2 ? ('0' + this.month) : this.month
+            this.value = [this.year, month, this.format(this.date)].join('-')
+            this.toggle()
+            this.timeShow = false
+            this.yearShow = false
+            this.dateShow = true
+            this.microtime = this.timestamp()
+        },
+        // 选择今天
+        checkToday () {
+            console.log(this);
         },
         updateDate () {
             let thisyear = this.year
