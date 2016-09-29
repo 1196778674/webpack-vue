@@ -36,6 +36,7 @@
                 <input type="tel" placeholder="00" v-model="hour"> : <input type="tel" placeholder="00" v-model="min">
                 <div class="button" :class="{ able: isAble }" @click="checkNow">确定</div>
             </div>
+
             <div style="clear:both;margin-bottom:10px"></div>
         </div>
     </button>
@@ -43,7 +44,7 @@
 
 <script>
 export default {
-    name: 'timePicker',
+    name: 'datePicker',
     props: {
         microtime: {
             type: Number,
@@ -53,16 +54,16 @@ export default {
     data () {
         return {
             open: false,
-            yearShow: true,
+            yearShow: false,
             monthShow: false,
-            dateShow: false,
+            dateShow: true,
             timeShow: false,
-            year: 2016,
+            year: new Date().getFullYear(),
             month: 4,
             date: 3,
             hour: '',
             min: '',
-            years: [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020],
+            years: [new Date().getFullYear() - 4, new Date().getFullYear() - 3, new Date().getFullYear() - 2, new Date().getFullYear() - 1, new Date().getFullYear(), new Date().getFullYear() + 1, new Date().getFullYear() + 2, new Date().getFullYear() + 3, new Date().getFullYear() + 4],
             months: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
             dates: [],
             isAble: false,
@@ -75,7 +76,8 @@ export default {
             this.value = [this.year, '0' + this.month, this.format(this.date)].join('.') + ' ' + [this.format(this.hour), this.format(this.min), '00'].join(':')
             this.toggle()
             this.timeShow = false
-            this.yearShow = true
+            this.yearShow = false
+            this.dateShow = true
             this.microtime = this.timestamp()
         },
         timestamp () {
