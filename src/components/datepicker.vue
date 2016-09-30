@@ -1,6 +1,6 @@
 <template>
     <button class="chooseDate">
-        <span @click="toggle">{{ value }}</span>
+        <span @click="toggle">{{ value }}</span><span class="icon-time" @click="toggle">&nbsp;</span>
         <div class="dateSelector" v-if="open" transition="fade">
             <div class="wrap year" v-if="yearShow">
                 <ul>
