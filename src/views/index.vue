@@ -15,9 +15,13 @@ export default {
   methods: {
     getTime () {
       console.log($('.nowdate').first().text(),$('.nowdate').last().text());
+    },
+    show () {
+      console.log(1);
     }
   },
   data () {
+    this.show();
     return {
     	index : 'index!!!!'
     };
