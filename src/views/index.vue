@@ -2,6 +2,8 @@
 {{index}}
 
 <date-picker></date-picker>
+<span>至</span>
+<date-picker></date-picker>
 <button type="button" class="btn btn-default" @click="getTime">button</button>
 </template>
 
@@ -12,7 +14,7 @@ export default {
 
   methods: {
     getTime () {
-      console.log($('#nowdate').text());
+      console.log($('.nowdate').first().text(),$('.nowdate').last().text());
     }
   },
   data () {
