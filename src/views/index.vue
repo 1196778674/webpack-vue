@@ -4,10 +4,12 @@
 <date-picker></date-picker>
 <span>至</span>
 <date-picker></date-picker>
+<div id="qrcodeDefault"></div>
 <button type="button" class="btn btn-default" @click="getTime">button</button>
 </template>
 
 <script>
+var qrcode = require('../../node_modules/qrcode/src/index.js')
 export default {
 
   name: 'index',
@@ -17,11 +19,16 @@ export default {
       console.log($('.nowdate').first().text(),$('.nowdate').last().text());
     },
     show () {
-      console.log(1);
+      var qrnode = new qrcode({
+        text: 'http://www.baidu.com/'
+      });
+      $(document).ready(function() {
+        $('#qrcodeDefault').html(qrnode);
+      });
     }
   },
   data () {
-    this.show();
+    this.show()
     return {
     	index : 'index!!!!'
     };
