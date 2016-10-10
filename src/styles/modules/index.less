@@ -1,0 +1,42 @@
+.index-container{
+	margin:0px 20px;
+	.index-row{
+		border: 1px solid #ccc;
+		padding: 20px;
+		border-radius: 5px;
+		background-color: #fff;
+		position: relative;
+		// 基础数据
+		.index-datepacker{
+			position: absolute;
+			top: 10px;
+			left: 150px;
+		}
+		.index-basedata{
+			margin-top: 20px;
+			background-color: rgb(241,246,250);
+			padding: 20px;
+			border-radius: 3px;
+			overflow: hidden;
+			ul{
+				width: 20%;
+				border-left: 1px solid #ddd;
+				float: left;
+				&:nth-child(1){
+					border-left: none;
+				}
+				li{
+					text-align: center;
+					padding: 4px 0px;
+					&.number{
+						font-size: 20px;
+						color: #888;
+					}
+					&.basedata-type{
+						color: #999;
+					}
+				}
+			}
+		}
+	}
+}

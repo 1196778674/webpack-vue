@@ -1,0 +1,41 @@
+.index-container {
+  margin: 0px 20px;
+}
+.index-container .index-row {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+  position: relative;
+}
+.index-container .index-row .index-datepacker {
+  position: absolute;
+  top: 10px;
+  left: 150px;
+}
+.index-container .index-row .index-basedata {
+  margin-top: 20px;
+  background-color: #f1f6fa;
+  padding: 20px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.index-container .index-row .index-basedata ul {
+  width: 20%;
+  border-left: 1px solid #ddd;
+  float: left;
+}
+.index-container .index-row .index-basedata ul:nth-child(1) {
+  border-left: none;
+}
+.index-container .index-row .index-basedata ul li {
+  text-align: center;
+  padding: 4px 0px;
+}
+.index-container .index-row .index-basedata ul li.number {
+  font-size: 20px;
+  color: #888;
+}
+.index-container .index-row .index-basedata ul li.basedata-type {
+  color: #999;
+}
