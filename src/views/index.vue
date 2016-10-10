@@ -27,7 +27,6 @@ export default {
     };
   },
   components: {
-  	replace: false,
   	datePicker: require('../components/datepicker.vue'),
     takeQrcode: require('../components/qrcode.vue')
   }
