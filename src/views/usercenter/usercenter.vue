@@ -13,8 +13,8 @@ export default {
     "todoList": require('./tpl/list.vue')
   },
   events: {
-    add: function(input) {
-      this.$broadcast('add', input);
+    addlist: function(input) {
+      this.$broadcast('addlist', input);
     }
   }
 }

@@ -18,7 +18,7 @@ export default {
   },
   methods: {
     add: function() {
-    	this.$dispatch("add", this.input); // 向上传递数据
+    	this.$dispatch("addlist", this.input); // 向上传递数据
     	this.input = '';
     }
   },
