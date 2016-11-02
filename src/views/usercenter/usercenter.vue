@@ -14,7 +14,7 @@ export default {
   },
   events: {
     addlist: function(input) {
-      this.$broadcast('addlist', input);
+      this.$broadcast('addlist', input); // 数据向下传递
     }
   }
 }
